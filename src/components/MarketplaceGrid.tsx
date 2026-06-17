@@ -4,6 +4,7 @@ import { useMemo } from "react";
 import { useAppMode } from "@/context/app-mode-context";
 import { propertySamples } from "@/components/property-data";
 import { PropertyCard } from "@/components/PropertyCard";
+import { AdvancedFilters } from "@/components/AdvancedFilters";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
@@ -48,6 +49,10 @@ export default function MarketplaceGrid() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="mb-6">
+        <AdvancedFilters />
       </div>
 
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">

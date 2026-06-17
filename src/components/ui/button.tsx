@@ -40,7 +40,6 @@ export function Button({
   variant = "primary",
   size = "md",
   className,
-  href,
   children,
   ...props
 }: ButtonProps | LinkButtonProps) {
@@ -51,9 +50,10 @@ export function Button({
     className,
   );
 
-  if (typeof href === "string") {
+  if ("href" in props && typeof props.href === "string") {
+    const { href, ...anchorProps } = props as Omit<LinkButtonProps, "variant" | "size" | "className" | "children">;
     return (
-      <Link href={href} className={classes} {...(props as AnchorHTMLAttributes<HTMLAnchorElement>)}>
+      <Link href={href} className={classes} {...anchorProps}>
         {children}
       </Link>
     );

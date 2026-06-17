@@ -47,7 +47,7 @@ export default function HeroSearch() {
                 placeholder={modeHintMap[mode]}
                 className="bg-blue-900/90"
               />
-              <Button variant="accent" className="w-full sm:w-auto">
+              <Button variant="primary" className="w-full sm:w-auto">
                 <Search className="h-4 w-4" />
                 Search
               </Button>
