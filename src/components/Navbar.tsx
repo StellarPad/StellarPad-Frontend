@@ -5,6 +5,7 @@ import * as React from "react";
 import { Layers } from "lucide-react";
 import { ModeToggle } from "@/components/ModeToggle";
 import { PasskeyModal } from "@/components/PasskeyModal";
+import { WalletWidget } from "@/components/WalletWidget";
 
 export default function Navbar() {
   const [authOpen, setAuthOpen] = React.useState(false);
@@ -21,24 +22,12 @@ export default function Navbar() {
             </Link>
 
             <div className="hidden md:flex items-center gap-6 text-sm text-blue-400">
-              <Link href="/marketplace" className="hover:text-foreground transition-colors">
-                Marketplace
-              </Link>
-              <Link href="/list" className="hover:text-foreground transition-colors">
-                List Property
-              </Link>
-              <Link href="/dashboard" className="hover:text-foreground transition-colors">
-                Dashboard
-              </Link>
+              <Link href="/marketplace" className="hover:text-foreground transition-colors">Marketplace</Link>
+              <Link href="/list" className="hover:text-foreground transition-colors">List Property</Link>
+              <Link href="/dashboard" className="hover:text-foreground transition-colors">Dashboard</Link>
             </div>
 
-            <button
-              type="button"
-              onClick={() => setAuthOpen(true)}
-              className="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white hover:bg-primary-hover transition-colors"
-            >
-              Sign In
-            </button>
+            <WalletWidget onOpenAuth={() => setAuthOpen(true)} />
           </div>
 
           <div className="mx-auto w-full max-w-4xl">
