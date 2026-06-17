@@ -3,6 +3,8 @@
 
 **A production-ready React + Next.js frontend for tokenized property marketplaces on the Stellar network.** StellarPad Frontend delivers an intuitive tenant/landlord marketplace experience with embedded on‑chain escrow, passkey and wallet auth, and lightweight Soroban smart contract integrations—reducing friction compared to legacy escrow platforms and centralized marketplaces.
 
+This README was updated for clarity and to reflect the current frontend scope.
+
 ## Overview
 StellarPad Frontend is the single-page application that powers a tokenized property marketplace. End users (tenants and landlords) browse listings, initiate deposits/payments, and complete lease checkouts through an accessible UX that combines instant client-side validation, passive background transaction assembly, and guided multi-step checkouts. Automated mechanics include wallet/passkey authentication, on‑device transaction pre-signing, escrow creation, and event-driven UI updates reflecting on‑chain state changes.
 
