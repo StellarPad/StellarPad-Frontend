@@ -6,6 +6,7 @@ import { Layers } from "lucide-react";
 import { ModeToggle } from "@/components/ModeToggle";
 import { PasskeyModal } from "@/components/PasskeyModal";
 import { WalletWidget } from "@/components/WalletWidget";
+import { CurrencyToggle } from "@/components/CurrencyToggle";
 
 export default function Navbar() {
   const [authOpen, setAuthOpen] = React.useState(false);
@@ -28,7 +29,10 @@ export default function Navbar() {
               <Link href="/portal" className="hover:text-foreground transition-colors">My Portal</Link>
             </div>
 
-            <WalletWidget onOpenAuth={() => setAuthOpen(true)} />
+            <div className="flex items-center gap-2">
+              <CurrencyToggle compact />
+              <WalletWidget onOpenAuth={() => setAuthOpen(true)} />
+            </div>
           </div>
 
           <div className="mx-auto w-full max-w-4xl">

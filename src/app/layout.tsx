@@ -4,6 +4,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { AppModeProvider } from "@/context/app-mode-context";
 import { WalletProvider } from "@/context/wallet-context";
+import { CurrencyProvider } from "@/components/CurrencyToggle";
+import { TxFeedbackProvider } from "@/components/TxFeedback";
 import "./globals.css";
 
 const inter = Inter({
@@ -24,9 +26,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen flex flex-col bg-transparent text-foreground">
         <AppModeProvider>
           <WalletProvider>
-            <Navbar />
-            <main className="flex-1">{children}</main>
-            <Footer />
+            <CurrencyProvider>
+              <TxFeedbackProvider>
+                <Navbar />
+                <main className="flex-1">{children}</main>
+                <Footer />
+              </TxFeedbackProvider>
+            </CurrencyProvider>
           </WalletProvider>
         </AppModeProvider>
       </body>
