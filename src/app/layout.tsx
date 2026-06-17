@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { AppModeProvider } from "@/context/app-mode-context";
+import { WalletProvider } from "@/context/wallet-context";
 import "./globals.css";
 
 const inter = Inter({
@@ -22,9 +23,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${inter.variable} bg-blue-950 text-foreground`}>
       <body className="min-h-screen flex flex-col bg-transparent text-foreground">
         <AppModeProvider>
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
+          <WalletProvider>
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </WalletProvider>
         </AppModeProvider>
       </body>
     </html>
