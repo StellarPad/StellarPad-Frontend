@@ -6,3 +6,4 @@ export * from "./PasskeyModal";
 export * from "./WalletWidget";
 export * from "./SmartEscrowVisualizer";
 export * from "./SavingsMeter";
+export * from "./ReputationTracker";
