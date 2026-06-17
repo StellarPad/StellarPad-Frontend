@@ -25,6 +25,7 @@ export default function Navbar() {
               <Link href="/marketplace" className="hover:text-foreground transition-colors">Marketplace</Link>
               <Link href="/list" className="hover:text-foreground transition-colors">List Property</Link>
               <Link href="/dashboard" className="hover:text-foreground transition-colors">Dashboard</Link>
+              <Link href="/portal" className="hover:text-foreground transition-colors">My Portal</Link>
             </div>
 
             <WalletWidget onOpenAuth={() => setAuthOpen(true)} />
