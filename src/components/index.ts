@@ -7,3 +7,4 @@ export * from "./WalletWidget";
 export * from "./SmartEscrowVisualizer";
 export * from "./SavingsMeter";
 export * from "./ReputationTracker";
+export * from "./PropertyDetailView";

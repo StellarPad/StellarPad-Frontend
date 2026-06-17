@@ -71,7 +71,7 @@ export function PropertyCard(property: PropertyCardProps) {
               <span className="text-sm text-blue-400">{priceLabel}</span>
             </div>
           </div>
-          <Button variant="secondary" className="w-full whitespace-nowrap sm:w-auto">
+          <Button variant="secondary" href={`/property/${property.id}`} className="w-full whitespace-nowrap sm:w-auto">
             View details
           </Button>
         </div>
