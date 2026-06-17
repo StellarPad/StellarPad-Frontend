@@ -238,7 +238,7 @@ export function PropertyDetailView({ property }: { property: PropertyDetail }) {
               </div>
             )}
 
-            <Button variant="primary" className="w-full" size="lg">
+            <Button variant="primary" href={`/property/${property.id}/checkout`} className="w-full" size="lg">
               {pricing.cta}
             </Button>
 
