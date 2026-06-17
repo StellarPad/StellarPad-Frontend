@@ -6,7 +6,9 @@
 ## Overview
 StellarPad Frontend is the single-page application that powers a tokenized property marketplace. End users (tenants and landlords) browse listings, initiate deposits/payments, and complete lease checkouts through an accessible UX that combines instant client-side validation, passive background transaction assembly, and guided multi-step checkouts. Automated mechanics include wallet/passkey authentication, on‑device transaction pre-signing, escrow creation, and event-driven UI updates reflecting on‑chain state changes.
 
-Under the hood the frontend integrates with a Soroban-based contract layer on Stellar for escrow and reputation tracking, and a lightweight API/worker layer for indexing ledger events and serving off‑chain content (images, metadata). Typical transaction costs are kept low via aggregated operations and pre-authorized multi-op transactions; onboarding friction is minimized using passkey auth, an opinionated WalletWidget that can inject Stellar WebAuthN flows, and a native checkout flow implemented in `src/components/property-data.ts` and `src/lib/stellar/index.ts`. Smart contract logic enforces escrow atomicity, multi-signature release rules, and role-based access for dispute resolution.
+Under the hood the frontend is designed to integrate with a Soroban-based contract layer on Stellar for escrow and reputation tracking, and a lightweight API/worker layer for indexing ledger events and serving off‑chain content (images, metadata). Typical transaction costs are kept low via aggregated operations and pre-authorized multi-op transactions; onboarding friction is minimized using passkey auth, an opinionated `WalletWidget` that can inject Stellar WebAuthn flows, and a native checkout flow implemented in `src/components/property-data.ts` and `src/lib/stellar/index.ts`. Smart contract logic enforces escrow atomicity, multi-signature release rules, and role-based access for dispute resolution.
+
+Note: this repository contains the frontend application and UI components. Relay, indexer, and backend services described in this document are conceptual or implemented in separate repositories/services and are not included in this frontend-only codebase.
 
 ## Features
 - **Marketplace Listings:** Responsive grid of property cards with filters, maps, and faceted search.  
@@ -363,4 +365,4 @@ Contributions are welcome. Please:
 - Open a pull request with a clear description and link to relevant issues.  
 - Follow the repository's coding standards and run `pnpm lint` before submitting.
 
-Would you like me to open a PR for this change instead of pushing directly?
+ 
