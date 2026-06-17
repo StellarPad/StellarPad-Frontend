@@ -4,3 +4,4 @@ export * from "./ModeToggle";
 export * from "./AdvancedFilters";
 export * from "./PasskeyModal";
 export * from "./WalletWidget";
+export * from "./SmartEscrowVisualizer";
