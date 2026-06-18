@@ -1,25 +1,6 @@
 # StellarPad Frontend
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
-  <defs>
-    <linearGradient id="grad" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0%" stop-color="#0A6D9B"/>
-      <stop offset="100%" stop-color="#45D2B4"/>
-    </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0A6D9B" flood-opacity="0.25"/>
-    </filter>
-  </defs>
-  <rect width="200" height="200" rx="40" fill="#0B1F2D"/>
-  <g filter="url(#shadow)">
-    <path d="M62 88L88 62C91 59 96 59 99 62L138 101C141 104 141 109 138 112L112 138C109 141 104 141 101 138L62 99C59 96 59 91 62 88Z" fill="url(#grad)"/>
-  </g>
-  <path d="M69 118L118 69" stroke="#FFF" stroke-width="12" stroke-linecap="round"/>
-  <path d="M71 75L75 71C79 67 86 67 90 71L129 110C133 114 133 121 129 125L125 129" stroke="#FFF" stroke-width="10" stroke-linecap="round"/>
-  <path d="M121 79L135 79C141 79 147 83 150 89C153 95 153 103 150 109L118 141C111 148 100 148 93 141L57 105C50 98 50 86 57 79L71 65" stroke="#81F5F8" stroke-width="8" stroke-linecap="round"/>
-</svg>
-**A production-ready React + Next.js frontend for tokenized property marketplaces on the Stellar network.** StellarPad Frontend delivers an intuitive tenant/landlord marketplace experience with embedded on‑chain escrow, passkey and wallet auth, and lightweight Soroban smart contract integrations—reducing friction compared to legacy escrow platforms and centralized marketplaces.
 
-This README was updated for clarity and to reflect the current frontend scope.
+**A production-ready React + Next.js frontend for tokenized property marketplaces on the Stellar network.** StellarPad Frontend delivers an intuitive tenant/landlord marketplace experience with embedded on‑chain escrow, passkey and wallet auth, and lightweight Soroban smart contract integrations—reducing friction compared to legacy escrow platforms and centralized marketplaces.
 
 ## Overview
 StellarPad Frontend is the single-page application that powers a tokenized property marketplace. End users (tenants and landlords) browse listings, initiate deposits/payments, and complete lease checkouts through an accessible UX that combines instant client-side validation, passive background transaction assembly, and guided multi-step checkouts. Automated mechanics include wallet/passkey authentication, on‑device transaction pre-signing, escrow creation, and event-driven UI updates reflecting on‑chain state changes.
