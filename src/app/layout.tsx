@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { AppModeProvider } from "@/context/app-mode-context";
 import { WalletProvider } from "@/context/wallet-context";
+import { ToastProvider } from "@/context/toast-context";
 import { CurrencyProvider } from "@/components/CurrencyToggle";
 import { TxFeedbackProvider } from "@/components/TxFeedback";
 import "./globals.css";
@@ -28,13 +29,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ErrorBoundary>
           <AppModeProvider>
             <WalletProvider>
-              <CurrencyProvider>
-                <TxFeedbackProvider>
-                  <Navbar />
-                  <main className="flex-1">{children}</main>
-                  <Footer />
-                </TxFeedbackProvider>
-              </CurrencyProvider>
+              <ToastProvider>
+                <CurrencyProvider>
+                  <TxFeedbackProvider>
+                    <Navbar />
+                    <main className="flex-1">{children}</main>
+                    <Footer />
+                  </TxFeedbackProvider>
+                </CurrencyProvider>
+              </ToastProvider>
             </WalletProvider>
           </AppModeProvider>
         </ErrorBoundary>
