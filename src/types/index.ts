@@ -116,3 +116,47 @@ export interface DashboardStats {
   pendingPayments?: number;
   disputes?: number;
 }
+
+// Re-export global types
+export type {
+  Nullable,
+  Optional,
+  Maybe,
+  Falsy,
+  Awaited,
+  PromiseValue,
+  AsyncFunction,
+  SyncFunction,
+  ChangeEvent,
+  SubmitEvent,
+  ComponentProps,
+  WithChildren,
+  WithClassName,
+  WithId,
+  Callback,
+  EventCallback,
+  DataCallback,
+  ErrorCallback,
+  FormFieldProps,
+  FormState,
+  StorageOptions,
+  RouteParams,
+  StringRecord,
+  NumberRecord,
+  AnyRecord,
+  DeepPartial,
+  DeepReadonly,
+  Merge,
+  ExcludeByValue,
+  PickByValue,
+  ObjectEntries,
+  PartialExcept,
+  RequiredExcept,
+  ExtractPromise,
+  AsyncState,
+  PaginationParams,
+  PaginatedResponse,
+  APIResponse as GenericAPIResponse,
+  FetchOptions,
+} from "./global";
+
