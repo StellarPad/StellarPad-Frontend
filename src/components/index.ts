@@ -16,3 +16,5 @@ export * from "./ListingWizardPart1";
 export * from "./ListingWizardPart2";
 export * from "./CurrencyToggle";
 export * from "./TxFeedback";
+export * from "./ErrorBoundary";
+export * from "./Breadcrumb";
